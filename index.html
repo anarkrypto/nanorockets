@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NanoRockets - Block Viewer</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body style="zoom: 0.6" ;>
+
+    <div class="banner">
+        <div class="bg"></div>
+    </div>
+
+    <body>
+
+
+        <div class="menu">
+            <h3>Nano Rockets</h3>
+            <p>-- To The Moon --</p>
+            <br>
+            <p id="cps_info" class="cps_info">CPS: 0.03 /sec</p>
+            <Br>
+            <button class="btn btn-info" onclick="donate()">Donate</button>
+            <div class="box"></div>
+    </body>
+    </div>
+
+    <div class="moon-zone"></div>
+
+    <div class="rockets-zone"></div>
+
+    <!-- Donation Modal -->
+    <div class="modal fade" id="donateModal" role="dialog" style="display: none">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Donate</h4>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <div class="qr_code">
+                            <img src="/img/qrcode.svg">
+                        </div>
+                        <p>nano_3rrngdugx7c4qkbfx8cjzhthhanwm3e9zstwrpef9ebaka37uuo1p8tdy315</p>
+                        <a href="nano:nano_3rrngdugx7c4qkbfx8cjzhthhanwm3e9zstwrpef9ebaka37uuo1p8tdy315"><button
+                                type="button" class="btn btn-info">Open Wallet</button></a>
+
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/js/nano_utils/bignumber.min.js"></script>
+    <script type="text/javascript" src="/js/nano_utils/blake2b.js"></script>
+    <script type="text/javascript" src="/js/work.js"></script>
+
+    <script type="text/javascript" src="/js/websockets.js"></script>
+    <script type="text/javascript" src="/js/rockets.js"></script>
+
+    <script type="text/javascript" src="/js/natricon.js"></script>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+</body>
+
+</html>
