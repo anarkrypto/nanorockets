@@ -41,7 +41,7 @@ async function handle_new_block(data) {
     // Create Rocket
     if(!document.hidden) {
         const rocketID = await createRocket(data.hash, data.account)
-        work_difficulty = work_validate(data.hash, data.block.work)
+        work_difficulty = work_validate(data.block.previous, data.block.work)
         document.getElementById(rocketID).setAttribute("alt", work_difficulty.multiplier)
         let rocket_speed = speed
         if (SPEED_MULTIPLIER) rocket_speed *= parseInt(work_difficulty.multiplier)
@@ -49,6 +49,5 @@ async function handle_new_block(data) {
     }
 
 }
-
 
 start_websockets(handle_new_block)
