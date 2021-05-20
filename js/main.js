@@ -11,19 +11,21 @@ function donated(){
 }
 
 // 60 second CPS tracker
-var cps_tracker = new Array(60).fill(0);
+var cps_tracker = [];
 setInterval(update_cps, 1 * 1000);
 
 function update_cps() {
     // Every second update the array
-    cps_tracker = cps_tracker.slice(1);
     cps_tracker.push(0);
+    if(cps_tracker.length > 60) {
+        cps_tracker = cps_tracker.slice(1);
+    }
     show_cps();
 }
 
 function show_cps() {
     // Update GUI
-    let cps = cps_tracker.reduce(function (a, b) { return a + b; }, 0) / cps_tracker.length;
+    let cps = cps_tracker.length == 0 ? 0 : (cps_tracker.reduce(function (a, b) { return a + b; }, 0) / cps_tracker.length);
     const cpsInfo = document.getElementById("cps_info")
     cpsInfo.innerText = 'CPS: ' + cps.toFixed(2) + ' /sec'
 }
